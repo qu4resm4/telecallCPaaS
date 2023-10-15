@@ -1,0 +1,80 @@
+.slogan {
+    font-size: 30px;
+}
+
+.slogan b {
+    color: white;
+    text-shadow:
+    -1px -1px #2AADE5,
+    -1px 1px #2AADE5,
+    1px -1px #2AADE5,
+    1px 1px #2AADE5;
+    
+}
+/* --section 1-- */
+.section-1 {
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sec1-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.sec1-div1 figure, .sec1-div1 p, .sec1-div1 a {
+    padding: 4vh 0;
+}
+
+.btn-teste {
+    border: none;
+    height: 70px;
+    border-radius: 30px;
+    background: #2AADE5;
+    color: white;
+    font-size: 28px;
+    padding: 0 20px;
+}
+
+.img-home {
+    height: 50vh;
+}
+
+/* --section 2-- */
+
+.section-2 {
+    background-color: #378BC4;
+    height: 90vh;
+}
+
+.sec2-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.sec2-div1 h1 {
+    font-size: 30px;    
+    padding: 3vh 3vw;
+    font-weight: bold;
+}
+
+.sobre {
+    padding: 3vh 3vw;
+    width: 35vw;
+    height: 70vh;
+    font-size: 20px;
+}
+
+/* --section 3-- */
+.section-3 {
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,83 @@
+a {
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+.navbar {
+    background-color: #cc1c2c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 77px;
+    padding: 0 45px 0 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    cursor: pointer;
+    background-color: white;
+    height: 77px;
+    margin-right: auto;
+    display: flex;
+}
+
+.logo img {
+    align-self: center;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.nav_links a {
+    padding: 10px;
+}
+
+.links {
+    color: white;
+
+}
+
+.btn-entrar {
+    padding: 9px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+
+}
+
+/* --- Dropdown no Menu dos Serviços */
+.dropdown-menu {
+    background-color: white;
+    position: absolute;
+    border: 1px solid #cc1c2c;
+    color: black;
+    list-style: none;
+    display: none;
+}
+
+.dropdown-menu a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/*
+.area {
+    background-color: white;
+    width: 50px;
+    height: 30px;
+}*/

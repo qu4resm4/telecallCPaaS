@@ -3,72 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="css/menu.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>MODAVO</title>
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/geral.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex">
-          <a class="navbar-brand text-white flex-grow-1" href="#">logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <div class="d-flex justify-content-sm-around">
-                    <div class="">
-                        <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            2FA
-                            </a>
-                            <ul class="dropdown-menu bg-danger">
-                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Num Mask
-                            </a>
-                            <ul class="dropdown-menu bg-danger">
-                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Verify
-                            </a>
-                            <ul class="dropdown-menu bg-danger">
-                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            SMS
-                            </a>
-                            <ul class="dropdown-menu bg-danger">
-                            <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        </ul>
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/img/modavo-1.png" alt="logo"></a>
+        <nav class="">
+            <ul class="nav_links">
+                <li class="dropdown">
+                    <a class="links dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Serviços
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="" class="">2FA</a>
+                        <a href="" class="">SMS</a>
+                        <a href="" class="">Number Masking</a>
+                        <a href="" class="">Verified Calls</a>
                     </div>
-                    <div class="area">
+                </li>
+                <li>
+                    <a href="" class="links">API</a>
+                </li>
+                <li>
+                    <a href="" class="links">Central de Ajuda</a>
+                </li>
+            </ul>
+        </nav>
+        <a href=""><button class="btn-entrar">Entrar</button></a>
+    </header>
 
-                    </div>
+
+    <main>
+        <section class="section-1">
+            <div class="sec1-div1">
+                <figure>
+                    <img src="assets/img/modavo-1.png" alt="logo">
+                </figure>
+                <p class="slogan">Com <b>flexibilidade</b>,<br>
+                    <b>escalabilidade</b> e <b>segurança</b><br>
+                    <b>revolucionando</b> a <b>comunicação</b>.
+                </p>
+                <a href="cadastro.html"><button type="button" class="btn-teste">Teste gratuitamente</button></a>
+            </div>
+
+            <div class="sec1-div2">
+                <figure>
+                    <img class="img-home" src="assets/img/img-home.png" alt="imagem ilustrativa">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <div class="sec2-div1">
+                <h1>O QUE É A MODAVO?</h1>
+                <div class="sobre text">
+                    <p>Nossa plataforma CPaaS é uma solução de software flexível que permite a integração de comunicações, como voz, vídeo e SMS, em outros sistemas, oferecendo escalabilidade, segurança e suporte local. Uma revolução para comunicações em nuvem, com alta confiabilidade e custo-benefício.</p>
                 </div>
             </div>
-        </div>
-      </nav>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+            <div class="sec2-div1">
+
+            </div>
+        </section>
+
+        <section class="section-3">
+
+        </section>
+
+        <section class="section-4">
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
     <script src="/js/menu.js"></script>
 </body>
 </html>
