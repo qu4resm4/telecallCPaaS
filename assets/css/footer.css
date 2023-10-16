@@ -1,0 +1,36 @@
+footer {
+    background-color: #cc1c2c;
+    height: 496px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sec1 {
+    display: flex;
+    flex-direction: row;
+    padding: 5vh 15vw;
+    margin: 0 0 56px 0;
+}
+
+.sumario h2 {
+    font-size: 22px;
+}
+
+.sumario a {
+    font-size: 15px;
+}
+
+.sumario p, .sumario a, .sumario h2 {
+    padding: 15px;
+    color: white;
+}
+
+.footer-sec2 {
+    width: 100vw;
+    background-color: #D9D9D9;
+    height: 59px;
+}
+
+.footer-sec2 p {
+    padding: 0 15vw;
+}

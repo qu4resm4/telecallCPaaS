@@ -1,0 +1,17 @@
+main {
+    height: 100%;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    margin: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+

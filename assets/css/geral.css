@@ -4,3 +4,18 @@
     font-family: michroma;
     margin: 0;
 }
+
+section h2 {
+    padding: 5vh;
+    margin: 5vh 5vh 0 12vh;
+
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #cc1c2c;
+    display: block;
+    margin: 10px 0;
+}
