@@ -1,9 +1,6 @@
 //chamando elementos usados
 const form = document.querySelector("form");
 const nameInput = document.querySelector("#nome");
-const cpfInput = document.querySelector("#cpf");
-const celInput = document.querySelector("#tel-cel");
-const fixInput = document.querySelector("#tel-fix");
 const loginInput = document.querySelector("#login");
 const passwordInput = document.querySelector("#password");
 const confirmInput = document.querySelector("#confirm");
