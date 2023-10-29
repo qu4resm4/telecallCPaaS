@@ -4,24 +4,34 @@ const fixInput = document.querySelector("#tel-fix");
 
 
 function maskPhone(input) {
-        var valorLimpo = input.value.replace(/\D/g, "").substring(0, 10);
-        var numerosArray = valorLimpo.split("");
-        var numeroFormatado = ""
-        //PROBLEMA: ddd não apaga 
-        if(numerosArray.length === 1){
-            numeroFormatado += `(${numerosArray.slice(0,2).join("")})`;
-        };
-        if(numerosArray.length > 2){
-            numeroFormatado += `${numerosArray.slice(2,6).join("")}`;
-        };
-        if(numerosArray.length > 6){
-            numeroFormatado += `-${numerosArray.slice(6,10).join("")}`
-        };
-    
-        input.value = numeroFormatado;
-    };
-    
+    //precisa ter o raplace para tirar o préfixo se não buga ao tentar apagar
+    let valor = input.value.replace("(+55)", '').replace(/\D/g, '').substring(0, 10);
+
+    if (valor.length >= 10) {
+        valor = `(+55)${valor.substr(0, 2)}-${valor.substr(2)}`;
+    }
+
+    return valor;
+    /*
+    var v = input.value
+    v = v.replace(/\D/g,"").substring(0, 10);
+    v = v.replace(/^(\d{2})(\d)/g,"($1) $2");
+    console.log(v)
+    v = v.replace(/(\d)(\d{4})$/,"$1-$2");
+    console.log(v)
+    return v;*/
+};
+
     function maskCPF(input){
+        var valor = input.value.replace(/\D/g, "").substring(0, 11);
+
+        if (valor.length >= 11) {
+            valor = `${valor.substr(0, 3)}.${valor.substr(3, 3)}.${valor.substr(6, 3)}-${valor.substr(9, 2)}`;
+        }
+    
+        return valor;
+
+        /*
         //bugado
         // 111.111.111-00
         var valorLimpo = input.value.replace(/\D/g, "").substring(0, 11);
@@ -43,16 +53,17 @@ function maskPhone(input) {
         };
     
         input.value = numeroFormatado
+    */
     };
+
+celInput.addEventListener("input", (event) => {
+    celInput.value = maskPhone(celInput);
     
-    celInput.addEventListener("input", (event) => {
-        maskPhone(celInput);
-    });
-    fixInput.addEventListener("input", (event) => {
-        maskPhone(fixInput);
-    });
-    cpfInput.addEventListener("input", (event) => {
-        maskCPF(cpfInput);
-    });
-    
-    //(01) 2345-6789
+});
+fixInput.addEventListener("input", (event) => {
+    fixInput.value = maskPhone(fixInput);
+});
+cpfInput.addEventListener("input", (event) => {
+    cpfInput.value = maskCPF(cpfInput);
+});
+
