@@ -1,6 +1,7 @@
 //chamando elementos usados
 const form = document.querySelector("form");
 const nameInput = document.querySelector("#nome");
+const motherInput = document.querySelector("#nome-mae");
 const loginInput = document.querySelector("#login");
 const passwordInput = document.querySelector("#password");
 const confirmInput = document.querySelector("#confirm");
@@ -36,7 +37,7 @@ function verificarCampoVazio(event) {
 
 // verificar caracteres mínimos e setErro
 function verificarMinChars(inputLength, indexInput, minChars, event) {
-    if(minChars >= inputLength){
+    if(minChars > inputLength){
         event.preventDefault();
         const mensagem = `Mínimo de ${minChars} caracteres`
         setErro(indexInput, mensagem)
@@ -72,24 +73,27 @@ function verifiicarConfirm(password, confirmPass, index, event) {
 };
 
 //  nova função de limitar caracteres a uma quantidade máxima e a caracteres especificos
-function tipoCaracteres(input, maxChars) {
-    var valor = input.value.replace(/[^A-Za-z]+/g, "").substring(0, maxChars);
+function tipoCaracteres(input, maxChars, pattern) {
+    var valor = input.value.replace(pattern, "").substring(0, maxChars);
     return valor;
 };
 
 // ouvindo eventos no input para substituir caracteres que não forem alfabeticos por "" (vazio)
 // e definindo máximo de caracteres utilizando o método substr(), atribuindo a variavel valor o subtring de determinado tamanho, limitando ao valor o determinado tamanho
 nameInput.addEventListener("input", (event) => {
-    nameInput.value = tipoCaracteres(nameInput, 60)
+    nameInput.value = tipoCaracteres(nameInput, 60, /[^A-Za-z\s]+/g)
+});
+motherInput.addEventListener("input", (event) => {
+    motherInput.value = tipoCaracteres(motherInput, 60, /[^A-Za-z\s]+/g)
 });
 loginInput.addEventListener("input", (event) => {
-    loginInput.value = tipoCaracteres(loginInput, 6)
+    loginInput.value = tipoCaracteres(loginInput, 6, /[^A-Za-z]+/g)
 });
 passwordInput.addEventListener("input", (event) => {
-    passwordInput.value = tipoCaracteres(passwordInput, 8)
+    passwordInput.value = tipoCaracteres(passwordInput, 8, /[^A-Za-z]+/g)
 });
 confirmInput.addEventListener("input", (event) => {
-    confirmInput.value = tipoCaracteres(confirmInput, 8)
+    confirmInput.value = tipoCaracteres(confirmInput, 8, /[^A-Za-z]+/g)
 });
 
 /*
