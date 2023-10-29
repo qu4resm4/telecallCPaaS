@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/geral.css">
     <script src="assets/js/validacao.js" defer></script>
@@ -13,12 +13,17 @@
     <main>
         <form action="" method="post">
             <fieldset>
-                <div class="titulo"><h2>LOGIN</h2></div>
-                <label for="">Login</label>
-                <input type="text">
+                <div class="campo">
+                    <label for="login">Login</label>
+                    <input type="text" name="login" id="login">
+                    <span class="feedback"></span>
+                </div>
                 
-                <label for="">Senha</label>
-                <input type="password" name="" id="">
+                <div class="campo">
+                    <label for="password">Senha</label>
+                    <input type="text" name="password" id="password">
+                    <span class="feedback"></span>
+                </div>
                 
                 <button>login</button>
             </fieldset>

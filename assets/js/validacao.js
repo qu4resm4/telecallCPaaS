@@ -8,6 +8,8 @@ const confirmInput = document.querySelector("#confirm");
 const campos = document.querySelectorAll("input, select")
 const spans = document.querySelectorAll("span")
 
+console.log(nameInput)
+
 // resposta visual aos erros de preenchimento
 function setErro(index, mensagem){
     campos[index].style.border = '1px solid red';
@@ -80,21 +82,32 @@ function tipoCaracteres(input, maxChars, pattern) {
 
 // ouvindo eventos no input para substituir caracteres que não forem alfabeticos por "" (vazio)
 // e definindo máximo de caracteres utilizando o método substr(), atribuindo a variavel valor o subtring de determinado tamanho, limitando ao valor o determinado tamanho
-nameInput.addEventListener("input", (event) => {
-    nameInput.value = tipoCaracteres(nameInput, 60, /[^A-Za-z\s]+/g)
-});
+// precisa do if verificando se é diferente de null para funcionar validacao.js no login pois daria erro se executar um addEventListner em um elemento que tem valor null, pois não existe no formulário o campo dele, como por exemplo nameInput
+if(!(nameInput === null)){
+    nameInput.addEventListener("input", (event) => {
+        nameInput.value = tipoCaracteres(nameInput, 60, /[^A-Za-z\s]+/g)
+    });
+}
+if(!(motherInput === null)){
 motherInput.addEventListener("input", (event) => {
     motherInput.value = tipoCaracteres(motherInput, 60, /[^A-Za-z\s]+/g)
 });
+}
+if(!(loginInput === null)){
 loginInput.addEventListener("input", (event) => {
     loginInput.value = tipoCaracteres(loginInput, 6, /[^A-Za-z]+/g)
 });
+}
+if(!(passwordInput === null)){
 passwordInput.addEventListener("input", (event) => {
     passwordInput.value = tipoCaracteres(passwordInput, 8, /[^A-Za-z]+/g)
 });
+}
+if(!(confirmInput === null)){
 confirmInput.addEventListener("input", (event) => {
     confirmInput.value = tipoCaracteres(confirmInput, 8, /[^A-Za-z]+/g)
 });
+}
 
 /*
 //  contadores de caracteres, limitando caracteres e tipos de caracteres
@@ -151,10 +164,7 @@ confirmInput.addEventListener("keypress", (event) => {
     // instanciando index dos campos (metódos findIndex e indexOf não funcionam diretamente na instancia campos pois é do tipo Object, para usá-los é necessário passar para array, pesquisei sobre os metódos e verifiquei o tipo da variavel campos usando log do console para mostrar o typeof campos)
     // usando um forEach e condicionais para recuperar a chave do input correspondente
     // isso é importante para que funcione tanto no cadastro quando no login pois em um o campos tem 10 chaves e o outro 2; não testei a validação no login ainda, veremos
-    var indexNameInput = undefined;
-    var indexLoginInput = undefined;
-    var indexPasswordInput = undefined;
-    var indexConfirmInput = undefined;
+    var indexNameInput, indexLoginInput, indexPasswordInput, indexConfirmInput;
     campos.forEach((campo, chave) => {
         if (campo == nameInput) {
             indexNameInput = chave;
