@@ -43,12 +43,14 @@ function verificarMinChars(inputLength, indexInput, minChars, event) {
     };
 };
 
+/*
 //  função limite máximo de caracteres
 function limitarCaracteres(event, inputLength, maxChars) {
     if(inputLength >= maxChars){
         event.preventDefault();
     }
 };
+*/
 
 // função verifica tipos de caracteres
 function verificarCaracteres(input, event, index) {
@@ -69,6 +71,28 @@ function verifiicarConfirm(password, confirmPass, index, event) {
     };
 };
 
+//  nova função de limitar caracteres a uma quantidade máxima e a caracteres especificos
+function tipoCaracteres(input, maxChars) {
+    var valor = input.value.replace(/[^A-Za-z]+/g, "").substring(0, maxChars);
+    return valor;
+};
+
+// ouvindo eventos no input para substituir caracteres que não forem alfabeticos por "" (vazio)
+// e definindo máximo de caracteres utilizando o método substr(), atribuindo a variavel valor o subtring de determinado tamanho, limitando ao valor o determinado tamanho
+nameInput.addEventListener("input", (event) => {
+    nameInput.value = tipoCaracteres(nameInput, 60)
+});
+loginInput.addEventListener("input", (event) => {
+    loginInput.value = tipoCaracteres(loginInput, 6)
+});
+passwordInput.addEventListener("input", (event) => {
+    passwordInput.value = tipoCaracteres(passwordInput, 8)
+});
+confirmInput.addEventListener("input", (event) => {
+    confirmInput.value = tipoCaracteres(confirmInput, 8)
+});
+
+/*
 //  contadores de caracteres, limitando caracteres e tipos de caracteres
 nameInput.addEventListener("keypress", (event) => {
     //comprimento do elemento em tempo real pq está dentro do keypress
@@ -115,10 +139,10 @@ confirmInput.addEventListener("keypress", (event) => {
     if(!(password.includes(confirmPassword))) {
         setErro(indexConfirmInput, mensagem);
     };
-    */
+    *\
     limitarCaracteres(event, confirmLength, max);
 });
-
+*/
 
     // instanciando index dos campos (metódos findIndex e indexOf não funcionam diretamente na instancia campos pois é do tipo Object, para usá-los é necessário passar para array, pesquisei sobre os metódos e verifiquei o tipo da variavel campos usando log do console para mostrar o typeof campos)
     // usando um forEach e condicionais para recuperar a chave do input correspondente
