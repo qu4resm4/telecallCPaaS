@@ -56,7 +56,7 @@ function limitarCaracteres(event, inputLength, maxChars) {
 // função verifica tipos de caracteres
 function verificarCaracteres(input, event, index) {
     const mensagem = 'Apenas caracteres alfabéticos são aceitos neste campo.';
-    const pattern = /[^A-Za-z]+/g;
+    const pattern = /[^A-Za-z\s]+/g;
     if(pattern.test(input.value)){
         event.preventDefault()
         setErro(index, mensagem)

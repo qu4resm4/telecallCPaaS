@@ -55,6 +55,20 @@ nav li {
 
 }
 
+.loged {
+    display: none;
+}
+
+.logado {
+    padding: 9px 12px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: Verdana;
+    font-weight: bolder;
+    font-size:medium;
+}
+
 /* --- Dropdown no Menu dos Serviços */
 .dropdown-menu {
     background-color: white;
