@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     arrayCadastro = arrayCadastro.filter(item => item !== ': undefined');
     console.log(arrayCadastro)
     //fazendo cadastro virar uma strig
-    strArrayCadastro = `[${arrayCadastro}]`;
+    strArrayCadastro = `"[${arrayCadastro}]"`;
     console.log(strArrayCadastro)
     //transformando o arrayUsersCadastro em um array e inserindo no final dele o cadastro feito
     //recebendo valor convertido em array
@@ -43,5 +43,5 @@ form.addEventListener("submit", (event) => {
     localStorage.setItem("arrayUsersCadastrados", str2)
 
     //redirect no final
-    window.location.href("login.html")
+    window.location.href = "login.html";
 });

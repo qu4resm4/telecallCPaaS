@@ -8,8 +8,6 @@ const confirmInput = document.querySelector("#confirm");
 const campos = document.querySelectorAll("input, select")
 const spans = document.querySelectorAll("span")
 
-console.log(nameInput)
-
 // resposta visual aos erros de preenchimento
 function setErro(index, mensagem){
     campos[index].style.border = '1px solid red';
