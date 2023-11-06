@@ -9,6 +9,7 @@ function get(){
     return localStorage.getItem("arrayUsersCadastrados");
 }
 localStorage_UsersCadastrados = get() === null ? set() : get();
+
 console.log(localStorage.getItem("arrayUsersCadastrados"));
 
 form.addEventListener("submit", (event) => {
@@ -23,19 +24,24 @@ form.addEventListener("submit", (event) => {
     // tirando os valores do elementos fieldset que ficam como ': undefined'
     arrayCadastro = arrayCadastro.filter(item => item !== ': undefined');
     console.log(arrayCadastro)
+
     //fazendo cadastro virar uma strig
     strArrayCadastro = `"[${arrayCadastro}]"`;
     console.log(strArrayCadastro)
+
     //transformando o arrayUsersCadastro em um array e inserindo no final dele o cadastro feito
     //recebendo valor convertido em array
     recebendo = localStorage_UsersCadastrados.split();
     console.log(recebendo);
+
     //removendo valor undefined da array, esse valor é setado no operador ternário da variavel localStorage_UsersCadastrados pois não há parametros ao chamar a função set
     arrayUsersCadastrados = recebendo.filter(item => item !== 'undefined')
     console.log(arrayUsersCadastrados)
+
     //adicionando o novo
     arrayUsersCadastrados.push(strArrayCadastro)
     console.log(arrayUsersCadastrados)
+
     // transformando nova instancia em string
     str2 = arrayUsersCadastrados.toString()
     console.log(str2)
@@ -45,3 +51,5 @@ form.addEventListener("submit", (event) => {
     //redirect no final
     window.location.href = "login.html";
 });
+
+
