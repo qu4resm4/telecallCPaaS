@@ -58,7 +58,7 @@ form.addEventListener("submit", (e) => {
         localStorage.setItem("login", loginInput.value)
         localStorage.setItem("senha", passwordInput.value)
     }
-
+    window.location.href = "login.html";
 });
 
 /*

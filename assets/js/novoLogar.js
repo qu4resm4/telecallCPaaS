@@ -21,6 +21,7 @@ function setErroPassword(){
     spans[1].innerHTML = 'Login ou senha incorretos';
 };
 form.addEventListener("submit", (e) => {
+    e.preventDefault();
         // pegar o cadastro e verificar ao submit do login se eles batem, caso contrário exibir um span de erro: Login ou senha incorretos
         if ((loginInput.value.length == 6) && (passwordInput.value.length == 8)) {
             if ((loginInput.value !== login) || (passwordInput.value !== senha)) {
@@ -30,6 +31,6 @@ form.addEventListener("submit", (e) => {
                 localStorage.setItem("loginLOGADO", "true")
             }
         }
-
+    window.location.href = "index.html";
 })
 // anotaçao: para desligar  efeitos de logado setar false usar mecanica de resgatar no localStorage 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <script src="assets/js/menu.js" defer></script>
 </head>
 <body>
     <header class="navbar">
@@ -33,12 +34,18 @@
                 </li>
             </ul>
         </nav>
-        <a href="login.html"><button class="btn-entrar">Entrar</button></a>
-        <div class="loged">
-            <div class="logado dropdown">G</div>
-            <div class="dropdown-menu">
-                <a>aaa</a>
-                <a>bbb</a>
+        <a class="btn-entrar" href="login.html">Entrar</a>
+        <div class="dropdown">
+            <div class="logado-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                </svg> 
+            </div>
+            <div class="dropdown-menu" id="menu-logado">
+                    <a href="">Perfil</a>
+                    <a href="">Dashboard</a>
+                    <a href="">Configurações</a>
+                    <button class="deslogar">SAIR</button>
             </div>
         </div>
     </header>
@@ -201,7 +208,5 @@
             <p>Copyright © 2023 | qu4.resm4. Todos os direitos reservados.</p>
         </div>
     </footer>
-    
-    <script src="/js/menu.js"></script>
 </body>
 </html>

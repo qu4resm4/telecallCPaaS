@@ -55,11 +55,8 @@ nav li {
 
 }
 
-.loged {
+.logado-icon {
     display: none;
-}
-
-.logado {
     padding: 9px 12px;
     background-color: white;
     border: none;
@@ -67,6 +64,10 @@ nav li {
     font-family: Verdana;
     font-weight: bolder;
     font-size:medium;
+}
+
+.deslogar {
+    /*estilizar botão*/
 }
 
 /* --- Dropdown no Menu dos Serviços */
@@ -77,6 +78,11 @@ nav li {
     color: black;
     list-style: none;
     display: none;
+}
+
+#menu-logado {
+    position: absolute;
+    right: 0;
 }
 
 .dropdown-menu a {
