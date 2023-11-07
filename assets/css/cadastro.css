@@ -28,4 +28,7 @@ fieldset {
     display: none;
 }
 
-
+.toast {
+    display: none;
+    position: absolute;
+}
