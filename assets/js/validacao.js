@@ -180,13 +180,8 @@ confirmInput.addEventListener("keypress", (event) => {
 
 //  verificar erros ao submeter formulário
 form.addEventListener("submit", (event) => {
-    // instanciando comprimento dos campos ao envio
-    const nameLength = nameInput.value.length;
-    const loginLength = loginInput.value.length;
-    const passwordLength = passwordInput.value.length;
-    const confirmLength = confirmInput.value.legth;
-
     if(!(nameInput === null)){
+        const nameLength = nameInput.value.length;
         // chamando função de verificar comprimento do campo
         verificarMinChars(nameLength, indexNameInput, 15, event)
         
@@ -195,16 +190,19 @@ form.addEventListener("submit", (event) => {
     }
     
     if(!(loginInput === null)){
+        const loginLength = loginInput.value.length;
         verificarMinChars(loginLength, indexLoginInput, 6, event)
         verificarCaracteres(loginInput, event, indexLoginInput);
     }
     
     if(!(passwordInput === null)){
+        const passwordLength = passwordInput.value.length;
         verificarMinChars(passwordLength, indexPasswordInput, 8, event);
         verificarCaracteres(passwordInput, event, indexPasswordInput);
     }
 
     if(!(confirmInput === null)){
+        const confirmLength = confirmInput.value.legth;
         verificarMinChars(confirmLength, indexConfirmInput, 8, event)
         verificarCaracteres(confirmInput, event, indexConfirmInput);
         verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
