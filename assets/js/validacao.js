@@ -180,26 +180,36 @@ confirmInput.addEventListener("keypress", (event) => {
 
 //  verificar erros ao submeter formulário
 form.addEventListener("submit", (event) => {
-    // chamando função de verificar campos vazios
-    verificarCampoVazio(event);
-
     // instanciando comprimento dos campos ao envio
     const nameLength = nameInput.value.length;
     const loginLength = loginInput.value.length;
     const passwordLength = passwordInput.value.length;
     const confirmLength = confirmInput.value.legth;
 
-    // chamando função de verificar comprimento do campo
-    verificarMinChars(nameLength, indexNameInput, 15, event)
-    verificarMinChars(loginLength, indexLoginInput, 6, event)
-    verificarMinChars(passwordLength, indexPasswordInput, 8, event)
-    verificarMinChars(confirmLength, indexConfirmInput, 8, event)
+    if(!(nameInput === null)){
+        // chamando função de verificar comprimento do campo
+        verificarMinChars(nameLength, indexNameInput, 15, event)
+        
+        // chamando função verificar se tem caracteres que não sejam alfabeticos nos inputs
+        verificarCaracteres(nameInput, event, indexNameInput);
+    }
     
-    // chamando função verificar se tem caracteres que não sejam alfabeticos nos inputs
-    verificarCaracteres(nameInput, event, indexNameInput);
-    verificarCaracteres(loginInput, event, indexLoginInput);
-    verificarCaracteres(passwordInput, event, indexPasswordInput);
-    verificarCaracteres(confirmInput, event, indexConfirmInput);
+    if(!(loginInput === null)){
+        verificarMinChars(loginLength, indexLoginInput, 6, event)
+        verificarCaracteres(loginInput, event, indexLoginInput);
+    }
+    
+    if(!(passwordInput === null)){
+        verificarMinChars(passwordLength, indexPasswordInput, 8, event);
+        verificarCaracteres(passwordInput, event, indexPasswordInput);
+    }
 
-    verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
+    if(!(confirmInput === null)){
+        verificarMinChars(confirmLength, indexConfirmInput, 8, event)
+        verificarCaracteres(confirmInput, event, indexConfirmInput);
+        verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
+    };
+
+    // chamando função de verificar campos vazios
+    verificarCampoVazio(event);
 });

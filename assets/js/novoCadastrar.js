@@ -4,6 +4,7 @@ const toast2 = document.querySelector("#toast2")
 const btnTake = document.querySelector(".take");
 const btnClose = document.querySelector("#close1");
 const btnClose2 = document.querySelector("#close2");
+var verificado;
 
 // isntanciando valores do localStorage login e senha.
 var localStorage_LoginCadastrado, localStorage_SenhaCadastrada;
@@ -24,10 +25,10 @@ function verificandoLocal(login, senha) {
     let loginLocal = localStorage.getItem("login");
     let senhaLocal = localStorage.getItem("senha");
 
-    if (loginLocal == "undefined" || senhaLocal == "undefined"){
-        return false
-    } else if (!(loginLocal == login) || !(senhaLocal == senha)) {
-        return true
+    if (loginLocal == "undefined" || senhaLocal == "undefined" || login == "" || senha == ""){
+        verificado = false;
+    } else if (loginLocal !== login || senhaLocal !== senha) {
+        verificado = true;
     }
     // tem que retorna true se o login ou a senha já estiverem preenchidas
 };
@@ -49,9 +50,9 @@ btnClose2.addEventListener("click", (e) => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    verificandoLocal(loginInput.value, passwordInput.value)
     // tem que verificar se existem valores no local storage,
-    if(verificandoLocal(loginInput.value, passwordInput.value)){
+    if(verificado){
         toast.style.display = "block";
     } else {
         localStorage.setItem("login", loginInput.value)
