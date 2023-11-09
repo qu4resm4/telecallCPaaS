@@ -7,6 +7,7 @@ const passwordInput = document.querySelector("#password");
 const confirmInput = document.querySelector("#confirm");
 const campos = document.querySelectorAll("input, select")
 const spans = document.querySelectorAll("span")
+var envioValido = true;
 
 // resposta visual aos erros de preenchimento
 function setErro(index, mensagem){
@@ -41,6 +42,7 @@ function verificarMinChars(inputLength, indexInput, minChars, event) {
         event.preventDefault();
         const mensagem = `Mínimo de ${minChars} caracteres`
         setErro(indexInput, mensagem)
+        return false
     };
 };
 
@@ -60,6 +62,7 @@ function verificarCaracteres(input, event, index) {
     if(pattern.test(input.value)){
         event.preventDefault()
         setErro(index, mensagem)
+        return false
     };
 };
 
@@ -69,6 +72,7 @@ function verifiicarConfirm(password, confirmPass, index, event) {
     if(password.value !== confirmPass.value) {
         event.preventDefault()
         setErro(index, mensagem)
+        return false
     };
 };
 
@@ -183,31 +187,31 @@ form.addEventListener("submit", (event) => {
     if(!(nameInput === null)){
         const nameLength = nameInput.value.length;
         // chamando função de verificar comprimento do campo
-        verificarMinChars(nameLength, indexNameInput, 15, event)
+        envioValido = verificarMinChars(nameLength, indexNameInput, 15, event)
         
         // chamando função verificar se tem caracteres que não sejam alfabeticos nos inputs
-        verificarCaracteres(nameInput, event, indexNameInput);
+        envioValido = verificarCaracteres(nameInput, event, indexNameInput);
     }
     
     if(!(loginInput === null)){
         const loginLength = loginInput.value.length;
-        verificarMinChars(loginLength, indexLoginInput, 6, event)
-        verificarCaracteres(loginInput, event, indexLoginInput);
+        envioValido = verificarMinChars(loginLength, indexLoginInput, 6, event)
+        envioValido = verificarCaracteres(loginInput, event, indexLoginInput);
     }
     
     if(!(passwordInput === null)){
         const passwordLength = passwordInput.value.length;
-        verificarMinChars(passwordLength, indexPasswordInput, 8, event);
-        verificarCaracteres(passwordInput, event, indexPasswordInput);
+        envioValido = verificarMinChars(passwordLength, indexPasswordInput, 8, event);
+        envioValido = verificarCaracteres(passwordInput, event, indexPasswordInput);
     }
 
     if(!(confirmInput === null)){
         const confirmLength = confirmInput.value.legth;
-        verificarMinChars(confirmLength, indexConfirmInput, 8, event)
-        verificarCaracteres(confirmInput, event, indexConfirmInput);
-        verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
+        envioValido = verificarMinChars(confirmLength, indexConfirmInput, 8, event)
+        envioValido = verificarCaracteres(confirmInput, event, indexConfirmInput);
+        envioValido = verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
     };
 
     // chamando função de verificar campos vazios
-    verificarCampoVazio(event);
+    envioValido = verificarCampoVazio(event);
 });
