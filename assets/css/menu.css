@@ -25,7 +25,7 @@ a {
 
 #btn-entrar {
     padding: 9px 25px;
-    background-color: white;
+    background-color: var(--white-bg);
     border: none;
     border-radius: 50px;
     font-weight: bold;
@@ -43,8 +43,14 @@ a {
     font-size:medium;
 }
 
+.item-logado{
+    color: var(--black-font);
+    text-decoration: none;
+}
+
 .deslogar {
     /*estilizar botão*/
+    margin: 10px 40px;
 }
 
 /* --- Dropdown no Menu dos Serviços */
@@ -55,6 +61,7 @@ a {
     color: black;
     list-style: none;
     display: none;
+    padding: 10px;
 }
 
 #menu-logado {
