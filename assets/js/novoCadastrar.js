@@ -25,8 +25,11 @@ function verificandoLocal(login, senha) {
     let loginLocal = localStorage.getItem("login");
     let senhaLocal = localStorage.getItem("senha");
 
-    if (loginLocal == "undefined" || senhaLocal == "undefined" || login == "" || senha == ""){
+    if (loginLocal == "undefined" || senhaLocal == "undefined" || login == "" || senha == "" || loginLocal == "" || senhaLocal == ""){
         verificado = false;
+    } else if (loginLocal == login) {
+        verificado = true;
+        setErro(indexLoginInput, "Usuário já cadastrado")
     } else if (loginLocal !== login || senhaLocal !== senha) {
         verificado = true;
     }
@@ -49,16 +52,17 @@ btnClose2.addEventListener("click", (e) => {
 });
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     if (envioValido) {
         verificandoLocal(loginInput.value, passwordInput.value)
+        console.log(verificado)
         // tem que verificar se existem valores no local storage,
         if(verificado){
             toast.style.display = "block";
         } else {
             localStorage.setItem("login", loginInput.value)
             localStorage.setItem("senha", passwordInput.value)
+            //window.location.href = "login.html";
         }
-        window.location.href = "login.html";
     }
 });

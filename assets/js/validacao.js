@@ -9,6 +9,7 @@ const campos = document.querySelectorAll("input, select")
 const spans = document.querySelectorAll("span")
 var envioValido = true;
 
+
 // resposta visual aos erros de preenchimento
 function setErro(index, mensagem){
     campos[index].style.border = '1px solid red';
@@ -28,11 +29,11 @@ function verificarCampoVazio(event) {
     //  percorre todos os elementos de campos
     campos.forEach((campo, index) => {
         //verifica se tá vazio
-        if (campo.value === "") {
+        if (campo.value == "") {
             event.preventDefault();
-            setErro(index, 'Preenchimento obrigatório');
-            return;
-        };
+            setErro(index, 'Preenchimento obrigatório')
+            envioValido = false
+        }
     });
 };
 
@@ -42,8 +43,10 @@ function verificarMinChars(inputLength, indexInput, minChars, event) {
         event.preventDefault();
         const mensagem = `Mínimo de ${minChars} caracteres`
         setErro(indexInput, mensagem)
-        return false
-    };
+        return false;
+    } else {
+        return true;
+    }
 };
 
 /*
@@ -62,8 +65,10 @@ function verificarCaracteres(input, event, index) {
     if(pattern.test(input.value)){
         event.preventDefault()
         setErro(index, mensagem)
-        return false
-    };
+        return false;
+    } else {
+        return true;
+    }
 };
 
 // função verificar se confirm é igual a password
@@ -73,6 +78,8 @@ function verifiicarConfirm(password, confirmPass, index, event) {
         event.preventDefault()
         setErro(index, mensagem)
         return false
+    } else {
+        return true;
     };
 };
 
@@ -184,34 +191,51 @@ confirmInput.addEventListener("keypress", (event) => {
 
 //  verificar erros ao submeter formulário
 form.addEventListener("submit", (event) => {
+console.log(envioValido)
+
+    campos.forEach((campo, index) => {
+        //reseta os campos
+        resetErro(index);
+    });
+
+    console.log(envioValido)
+
     if(!(nameInput === null)){
         const nameLength = nameInput.value.length;
         // chamando função de verificar comprimento do campo
         envioValido = verificarMinChars(nameLength, indexNameInput, 15, event)
-        
+        console.log(envioValido)
         // chamando função verificar se tem caracteres que não sejam alfabeticos nos inputs
         envioValido = verificarCaracteres(nameInput, event, indexNameInput);
+        console.log(envioValido)
     }
     
     if(!(loginInput === null)){
         const loginLength = loginInput.value.length;
         envioValido = verificarMinChars(loginLength, indexLoginInput, 6, event)
+        console.log(envioValido)
         envioValido = verificarCaracteres(loginInput, event, indexLoginInput);
+        console.log(envioValido)
     }
     
     if(!(passwordInput === null)){
         const passwordLength = passwordInput.value.length;
         envioValido = verificarMinChars(passwordLength, indexPasswordInput, 8, event);
+        console.log(envioValido)
         envioValido = verificarCaracteres(passwordInput, event, indexPasswordInput);
+        console.log(envioValido)
     }
 
     if(!(confirmInput === null)){
         const confirmLength = confirmInput.value.legth;
         envioValido = verificarMinChars(confirmLength, indexConfirmInput, 8, event)
+        console.log(envioValido)
         envioValido = verificarCaracteres(confirmInput, event, indexConfirmInput);
+        console.log(envioValido)
         envioValido = verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
+        console.log(envioValido)
     };
 
     // chamando função de verificar campos vazios
-    envioValido = verificarCampoVazio(event);
+    verificarCampoVazio(event)
 });

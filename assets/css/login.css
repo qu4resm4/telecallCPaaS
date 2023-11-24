@@ -1,17 +1,13 @@
-main {
-    height: 100%;
-    width: 100%;
-}
-
-form {
+body {
+    min-height: 100vh;
+    min-width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-fieldset {
-    margin: 5vh 5vw;
-    display: flex;
-    flex-direction: column;
+#btn-color {
+    background-color: var(--red-bg);
+    color: var(--white-bg);
+    border-radius: 15px;
 }
-

@@ -1,6 +1,6 @@
 body {
-    width: 100%;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,13 +8,8 @@ body {
 
 .campo span {
     display: none;
+    color: red;
 
-}
-
-.titulo {
-    margin: 1vh;
-    display: flex;
-    flex-direction: column;
 }
 
 fieldset {
@@ -22,7 +17,12 @@ fieldset {
     width: 100%;
 }
 
-
+#btn-sub {
+    background-color: var(--red-bg);
+    color: var(--white-bg);
+    border-radius: 15px;
+    text-align: center;
+}
 
 .form-image {
     display: none;
@@ -31,4 +31,21 @@ fieldset {
 .toast {
     display: none;
     position: absolute;
+}
+
+@media (max-width: 991px) {
+    form {
+        margin: 100px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .relativo {
+        position: relative;
+    }
+    #btn-sub {
+        position: absolute;
+        top: 1100px;
+        right: 0px;
+    }
 }
