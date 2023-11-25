@@ -1,0 +1,25 @@
+.btn-teste {
+    border: none;
+    height: 70px;
+    border-radius: 30px;
+    background-color: #2AADE5;
+    color: white;
+    font-size: 28px;
+    padding: 0 20px;
+}
+
+.slogan {
+    width: 75%;
+    font-size: 20px;
+}
+
+.section-1 {
+    height: 90vh;
+    background-color: var(--bege-bg);
+}
+
+.sec1-div1 {
+}
+
+.sec1-div2 {
+}
