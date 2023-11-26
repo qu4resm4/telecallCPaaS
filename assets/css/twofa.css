@@ -1,0 +1,42 @@
+#section-2 {
+ min-height: 95vh;
+}
+
+#section-3 {
+    background-color: var(--bege-bg);
+    min-height: 95vh;
+}
+
+#section-3 ul {
+    margin: 0 6vw;
+}
+
+#section-3 li {
+    margin: 5vh 0vw;
+}
+
+
+.semicircle {
+    width: 50vw;
+    height: 100vh;
+    shape-outside: circle(50% at 100%);
+    clip-path: circle(75% at 100%);
+    background-color: var(--white-bg);
+}
+
+.img-login {
+    position: absolute;
+    top: 215vh;
+    right: 2vw;
+    max-height: 60vh;
+    z-index: 1;
+}
+
+#section-4 {
+    min-height: 95vh;
+}
+
+.textos {
+    margin: 2vh 2vw;
+    justify-content: center;
+}

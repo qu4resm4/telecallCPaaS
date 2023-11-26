@@ -1,0 +1,51 @@
+#section-1 img {
+    transform: scaleX(-1);
+}
+
+#section-2 p {
+    margin: 9vw 6vw 0 6vw;
+    font-size: 19px;
+    text-align: justify;
+}
+
+#section-2 img {
+    max-height: 50vh;
+}
+
+.div-circle {
+    min-height: 94vh;
+}
+
+.circle {
+        width: 40vw;
+        height: 40vw;
+        background-color: var(--bege-bg);
+        border-radius: 50%; 
+        text-align: justify;
+}
+
+#section-3, #section-5 {
+    background-color: var(--bege-bg);
+    min-height: 98vh;
+}
+
+#section-3 p {
+    text-align: center;
+}
+
+#section-5 .row {
+    min-height: 62vh;
+}
+
+#section-5 .textos {
+    text-align: center;
+}
+
+
+#section-4 ul {
+    margin: 0 6vw;
+}
+
+#section-4 li {
+    margin: 5vh 0vw;
+}
