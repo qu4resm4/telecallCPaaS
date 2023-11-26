@@ -2,17 +2,33 @@
     max-height: 500px;
 }
 
-.section-3, .section-5 {
+#section-3, #section-5 {
     background-color: var(--bege-bg);
     min-height: 95vh;
 
 }
 
-.section-4 p {
+#section-4 p {
     max-width: 300px;
     text-align: justify;
 }
 
 .textos {
     margin: 2vh 6vw;
+}
+
+#section-5 ul {
+    margin: 0 6vw;
+}
+
+#section-5 li {
+    margin: 5vh 0vw;
+}
+
+.semicircle {
+    width: 100vw;
+    height: 100vh;
+    shape-outside: circle(50% at 100%);
+    clip-path: circle(100% at 100%);
+    background-color: var(--white-bg);
 }

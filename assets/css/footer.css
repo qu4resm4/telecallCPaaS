@@ -1,10 +1,36 @@
-footer {
+.sumarios {
     background-color: #cc1c2c;
-    height: 496px;
-    display: flex;
-    flex-direction: column;
+    min-height: 496px;
 }
 
+footer a {
+    text-decoration: none;
+}
+
+.sumario {
+    padding: 15vh 0 15vh 2vw;
+}
+
+.sumario p {
+    font-size: 20px;
+}
+
+.rodape {
+    width: 101vw;
+    background-color: var(--cinza-bg-rodape);
+    min-height: 110px;
+}
+
+.rodape p {
+
+}
+
+.tele-icon {
+    height: 100px;
+    width: 100px;
+}
+
+/*
 .footer-sec1 {
     display: flex;
     flex-direction: row;
@@ -34,3 +60,4 @@ footer {
 .footer-sec2 p {
     padding: 0 15vw;
 }
+*/
