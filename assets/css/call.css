@@ -1,25 +1,18 @@
-.btn-teste {
-    border: none;
-    height: 70px;
-    border-radius: 30px;
-    background-color: #2AADE5;
-    color: white;
-    font-size: 28px;
-    padding: 0 20px;
+#call-ve {
+    max-height: 500px;
 }
 
-.slogan {
-    width: 75%;
-    font-size: 20px;
-}
-
-.section-1 {
-    height: 90vh;
+.section-3, .section-5 {
     background-color: var(--bege-bg);
+    min-height: 95vh;
+
 }
 
-.sec1-div1 {
+.section-4 p {
+    max-width: 300px;
+    text-align: justify;
 }
 
-.sec1-div2 {
+.textos {
+    margin: 2vh 6vw;
 }

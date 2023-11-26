@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+  }
+
 /*class p por no body*/
 :root {
     --red-bg: #cc1c2c;
@@ -19,9 +23,45 @@
 
 }
 
+/*logo modavo*/
+#modavo b {
+    color: white;
+    text-shadow:
+    -1px -1px #2AADE5,
+    -1px 1px #2AADE5,
+    1px -1px #2AADE5,
+    1px 1px #2AADE5;
+    
+}
+
+/* primeira seção das telas de serviço */
+.btn-teste {
+    border: none;
+    height: 70px;
+    border-radius: 30px;
+    background-color: #2AADE5;
+    color: white;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+.slogan {
+    width: 75%;
+    font-size: 20px;
+}
+
+section {
+    min-height: 88vh;
+}
+
+.section-1 {
+    background-color: var(--bege-bg);
+}
+
+/*negocinho debaixo dos titulos */
 section h2 {
-    padding: 5vh;
-    margin: 5vh 5vh 0 12vh;
+    padding: 10vh 3vw 5vh;
+    margin: 5vh 3vw;
 
 }
 
