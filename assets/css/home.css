@@ -1,5 +1,6 @@
 .slogan {
     font-size: 30px;
+    width: auto;
 }
 
 .slogan b {
@@ -11,89 +12,39 @@
     1px 1px #2AADE5;
     
 }
-/* --section 1-- */
-.section-1 {
-    display: flex;
-    height: 90vh;
-    justify-content: space-around;
-    align-items: center;
+
+main #modavo {
+    font-size: 70px;
 }
 
-.sec1-div1 {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
+#section-1 {
+    background-color: var(--white-bg);
+    min-height: 95vh;
 }
 
-.sec1-div1 figure, .sec1-div1 p, .sec1-div1 a {
-    padding: 4vh 0;
+#section-1 img {
 }
 
-.btn-teste {
-    border: none;
-    height: 70px;
-    border-radius: 30px;
-    background: #2AADE5;
-    color: white;
-    font-size: 28px;
-    padding: 0 20px;
+#section-2 {
+    background-color: var(--bege-bg);
+    min-height: 98vh;
 }
 
-.img-home {
-    height: 50vh;
+#section-2 p {
+    margin: 0 7vw;
+    text-align: justify;
 }
 
-/* --section 2-- */
-
-.section-2 {
-    background-color: #378BC4;
-    height: 90vh;
+#section-3 {
+    background-color: var(--white-bg);
+    min-height: 98vh;
 }
 
-.sec2-div1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
+#section-3 .row {
+    min-height: 62vh;
 }
 
-.sec2-div1 h1 {
-    font-size: 30px;    
-    padding: 3vh 3vw;
-    font-weight: bold;
+#section-3 .textos {
+    text-align: center;
 }
 
-.sobre {
-    padding: 3vh 3vw;
-    width: 35vw;
-    height: 70vh;
-    font-size: 20px;
-}
-
-/* --section 3-- */
-.section-3 {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content:center;
-    align-items: center;
-}
-
-.sec3-div1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10vh;
-}
-
-.solucoes {
-    display: flex;
-    flex-direction: column;
-}
-
-/*isso não funcionou*/
-/*
-.solucoes svg, .solucoes h2, .solucoes p {
-    justify-self: center;
-}*/

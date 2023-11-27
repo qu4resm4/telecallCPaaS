@@ -1,98 +1,56 @@
-h1 {
-    font-size: 40px;
-    text-transform: uppercase ;
+#section-2 {
+    min-height: 90vh;
 }
 
-.slogan {
-    width: 40vw;
-    font-size: 20px;
+.img-hand {
+    min-height: 70vh;
 }
 
-.slogan b {
-    color: white;
-    text-shadow:
-    -1px -1px #2AADE5,
-    -1px 1px #2AADE5,
-    1px -1px #2AADE5,
-    1px 1px #2AADE5;
-    
-}
-/* --section 1-- */
-.section-1 {
-    display: flex;
-    height: 90vh;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f5f5f5;
+.img-hand img {
+    max-height: 70vh;
+    transform: scaleX(-1);
 }
 
-.sec1-div1 {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
+#section-2 p {
+    width: 30vw;
+    min-width: 300px;
 }
 
-.sec1-div1 h1, .sec1-div1 p, .sec1-div1 a {
-    padding: 4vh 0;
+#section-3{
+    background-color: var(--bege-bg);
+    min-height: 98vh;
 }
 
-.btn-teste {
-    border: none;
-    height: 70px;
-    border-radius: 30px;
-    background-color: #2AADE5;
-    color: white;
-    font-size: 28px;
-    padding: 0 20px;
+#section-3 ul {
+    margin: 0 6vw;
+}
+
+#section-3 li {
+    margin: 5vh 0vw;
 }
 
 
-/* --section2-- */
-
-.section-2 {
-    display: flex;
-    width: 100vw;
-    height: 90vh;
-}
-
-.sec2-div1 {
+.semicircle {
     width: 50vw;
-    height: 50vh;
-
+    height: 100vh;
+    shape-outside: circle(50% at 100%);
+    clip-path: circle(75% at 100%);
+    background-color: var(--white-bg);
 }
 
-.sec2-div1 p {
-    padding: 5vh;
-    margin: 0 5vh 0 12vh;
-    text-align: justify;
+.img-login {
+    position: absolute;
+    top: 215vh;
+    right: 2vw;
+    max-height: 60vh;
+    z-index: 1;
 }
 
-.sec2-div2 {
-    margin-top: auto;
-    margin-left: auto;
 
+#section-4 .row {
+    min-height: 50vh;
 }
 
-.sec2-div2 img {
-    height: 70vh;
-    justify-self: flex-end;
-}
-
-/* --section 3--*/
-.section-3 {
-    display: flex;
-    flex-direction: row;
-    height: 95vh;
-}
-
-.sec3-div1 {
-
-}
-
-.img-sms-beneficio img {
-    height: 60vh;
-}
-
-.sec3-div2 {
-    
+#section-4 .textos {
+    text-align: center;
 }

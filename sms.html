@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS - MODAVO</title>
+    <title>SMS</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/telecall-favicon.svg">
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/sms.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -16,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-color">
             <div class="container-fluid p-0">
-                <a class="navbar-brand" href="#" id="modavo">MO<b>DA</b>VO</a>
+                <a class="navbar-brand" href="index.html" id="modavo">MO<b>DA</b>VO</a>
                     <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -34,7 +35,7 @@
                             </ul>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link item_color" aria-current="page" href="#">API</a>
+                            <a class="nav-link item_color" aria-current="page" href="https://cpaasapi.telecall.com.br/swagger/index.html">API</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link item_color" href="#">Central de Ajuda</a>
@@ -79,7 +80,7 @@
     </header>
     
     <main>
-        <section class="section-1 container-fluid d-flex justify-content-around">
+        <section id="section-1" class="container-fluid d-flex justify-content-around">
             <div class="row px-5 py-5">
                 <div class="sec1-div1 col-md-7 p-5">
                     <div>
@@ -99,95 +100,204 @@
             </div>
         </section>         
 
-        <section class="section-2">
-            <div class="sec2-div1">
-                <div class="titulo">
-                    <h2>Como funciona?</h2>
+        <section id="section-2" class="container-fluid">
+            <div class="mx-5 d-flex flex-row justify-content-between">
+                <div class="">
+                    <h2 class="titulo ms-0">Como funciona</h2>
+                    <div class="d-flex d-xl-none flex-column justify-content-center align-items-center">
+                        <h4 class="mx-5 mb-5">Conecte-se com seus clientes.</h4>
+                        <p class="m-5">
+                            É muito provável que você já tenha recebido uma
+                            mensagem de texto de uma empresa ou organização.
+                            Com uma API, qualquer empresa pode enviar mensagens
+                            de texto e impactar clientes, prospects ou fornecedores
+                            como parte de seu processo comercial.
+                            Com essa ferramenta você envia mensagens de SMS com
+                            as informações que o seu cliente precisa e com a
+                            segurança, a velocidade e a confiabilidade que você
+                            espera.
+                        </p>
+                    </div>
+                    <div class="d-none d-xxl-block">
+                        <div class="img-hand">
+                            <div class="img-hand d-xl-block d-none d-flex justify-content-start align-items-end">
+                                <img src="assets/img/smartphone-hand.png" alt="mão com telefone">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text">
-                    <p>
-                        Nosso serviço de SMS programável permite que empresas e desenvolvedores enviem mensagens de texto personalizadas de forma automatizada para contatos ou clientes por meio de uma API. Os usuários integram essa API em seus aplicativos, definem mensagens personalizadas, gerenciam listas de contatos e podem automatizar o envio em momentos específicos ou em resposta a eventos. O serviço também fornece relatórios de entrega e opções de resposta dos destinatários. É uma ferramenta versátil usada para marketing, notificações, autenticação e comunicação com clientes, permitindo uma interação eficiente e personalizada por meio de mensagens de texto.
+                <div class="d-none d-xl-flex flex-column justify-content-center align-items-center">
+                    <h4 class="mx-5 mb-5">Conecte-se com seus clientes.</h4>
+                    <p class="m-5">
+                        É muito provável que você já tenha recebido uma
+                        mensagem de texto de uma empresa ou organização.
+                        Com uma API, qualquer empresa pode enviar mensagens
+                        de texto e impactar clientes, prospects ou fornecedores
+                        como parte de seu processo comercial.
+                        Com essa ferramenta você envia mensagens de SMS com
+                        as informações que o seu cliente precisa e com a
+                        segurança, a velocidade e a confiabilidade que você
+                        espera.
                     </p>
                 </div>
             </div>
-            <div class="sec2-div2">
-                <figure>
-                    <img src="assets/img/celular_mao-1.jpg" alt="celular na mão ilustrativo">
-                </figure>
-            </div>
         </section>
-        
-        
-        <section class="section-3">
-            <div class="sec3-div1">
-                <div class="titulo">
-                    <h2>Benefícios</h2>
+
+        <section id="section-3" class="conteiner">
+            <div class="row">
+                <div class="col-10 col-xxl-8">
+                    <h2 class="titulo pb-0">Benefícios</h2>
+                    <ul>
+                       <li>Comunicação rápida, efetiva e escalável.</li>
+                       <li>Baixo custo.</li>
+                       <li>Alta taxa de entrega e leitura.</li>
+                       <li>Personalização de data, hora e conteúdo</li>
+                       <li>Agendamento de campanhas.</li>
+                       <li>Interação bidirecional: recebimento de respostas.</li>
+                       <li>Plataforma user-friendly.</li>
+                       <li>Acompanhamento de métricas e relatórios</li> 
+                    </ul>
                 </div>
-                <div class="img-sms-beneficio">
-                    <figure>
-                        <img src="assets/img/undraw_authentication_re_svpt.svg" alt="">
-                    </figure>
+                <div class="col-0 col-xxl-4 p-0">
+                    <img class="img-login img-fluid d-xxl-block d-none" src="assets/img/undraw_messages_re_qy9x.svg" alt="">
+                    <div class="semicircle d-flex justify-content-end align-items-end d-xxl-block d-none">
+                    </div>
+                </div> 
+            </div>
+        </section>
+        
+        <section id="section-4" class="conteiner-fluid">
+            <h2 class="titulo pt-5 pb-0">Usos</h2>
+            <div class="row mx-2 px-5 d-flex align-items-center">
+                <div class="col">
+                    <div class="textos">
+                        <div class="d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-megaphone" viewBox="0 0 16 16">
+                                <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z"/>
+                            </svg>
+                        </div>
+                        
+                        <h5 class="my-4">
+                            Divulgação  
+                        </h5>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="textos">
+                        <div class="d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
+                                <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5m16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674z"/>
+                            </svg>
+                        </div>
+                        
+                        <h5 class="my-4">
+                              Transações
+                        </h5>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="textos">
+                        <div class="d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56"/>
+                                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </div>
+                        
+                        <h5 class="my-4">
+                              Segurança
+                        </h5>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="textos">
+                        <div class="d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                            </svg>
+                        </div>
+                        
+                        <h5 class="my-4">
+                            Suporte ao Cliente  
+                        </h5>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="textos">
+                        <div class="d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-envelope-exclamation" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1.5a.5.5 0 0 1-1 0V11a.5.5 0 0 1 1 0m0 3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                            </svg>
+                        </div>
+                        
+                        <h5 class="my-4">
+                              Notificações
+                        </h5>
+                        <p>
+                            
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="sec3-div1">
-                <ul>
-                    <li>Comunicação rápida, efetiva e escalável</li>
-                    <li>Baixo custo.</li>
-                    <li>Alta taxa de entrega e leitura.</li>
-                    <li> Personalização de data, hora e conteúdo.</li>
-                    <li>Agendamento de campanhas.</li>
-                    <li>Interação bidirecional: recebimento de respostas.</li>
-                    <li>Plataforma user-friendly.</li>
-                    <li>Acompanhamento de métricas e relatórios.</li>
-                </ul>
-            </div>
         </section>
-
-        
-        <section class="section-4">
-
-        </section>
-
     </main>
 
     <footer>
-        <div class="footer-sec1">
-            <div class="sumario">
-                <a href="#"><h2>2FA</h2></a>
-                <p><a href="#">Como Funciona</a></p>
-                <p><a href="#">Benefícios</a></p>
-                <p><a href="#">Usos</a></p>
+        <div class="conteiner-fluid sumarios">
+            <div class="row mx-5 px-5">
+                    <div class="col-md sumario">
+                        <a href="twofa.html"><h3>2FA</h3></a>
+                        <p><a href="twofa.html#section-2">Como Funciona</a></p>
+                        <p><a href="twofa.html#section-3">Benefícios</a></p>
+                        <p><a href="twofa.html#section-4">Usos</a></p>
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="sms.html"><h3>SMS Programável</h3></a>
+                        <p><a href="sms.html#section-2">Como Funciona</a></p>
+                        <p><a href="sms.html#section-3">Benefícios</a></p>
+                        <p><a href="sms.html#section-4">Usos</a></p>
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="mask.html"><h3>Number Masking</h3></a>
+                        <p><a href="mask.html#section-2">O que é?</a></p>
+                        <p><a href="mask.html#section-3">Recursos</a></p>
+                        <p><a href="mask.html#section-4">Quem Usa?</a></p>
+        
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="call.html"><h3>Verified Calls</h3></a>
+                        <p><a href="call.html#section-2">O que é?</a></p>
+                        <p><a href="call.html#section-3">Como Funciona</a></p>
+                        <p><a href="call.html#section-4">Benefícios</a></p>
+                        <p><a href="call.html#section-5">Usos</a></p>
+                    </div>
             </div>
-
-            <div class="sumario">
-                <a href="#"><h2>SMS Programável</h2></a>
-                <p><a href="#">Como Funciona</a></p>
-                <p><a href="#">Benefícios</a></p>
-                <p><a href="#">Jornada do Cliete</a></p>
-                <p><a href="#">Quem Usa?</a></p>
-
-            </div>
-
-            <div class="sumario">
-                <a href="#"><h2>Number Masking</h2></a>
-                <p><a href="#">O que é?</a></p>
-                <p><a href="#">Recursos</a></p>
-                <p><a href="#">Quem Usa?</a></p>
-
-            </div>
-
-            <div class="sumario">
-                <a href="#"><h2>Verified Calls</h2></a>
-                <p><a href="#">O que é?</a></p>
-                <p><a href="#">Como Funciona</a></p>
-                <p><a href="#">Benefícios</a></p>
-                <p><a href="#">Usos</a></p>
-            </div>
-
         </div>
-
-        <div class="footer-sec2">
-            <p>Copyright © 2023 | qu4.resm4. Todos os direitos reservados.</p>
+        <div class="row rodape px-5 d-flex align-items-center">
+            <p class="col-6 mx-5 px-5">Copyright © 2023 | qu4.resm4. Todos os direitos reservados.</p>
+            <div class="col">
+                <img class="tele-icon float-end" src="assets/img/telecall-icon.svg" alt="logo telecall">
+            </div>
         </div>
     </footer>
 </body>
