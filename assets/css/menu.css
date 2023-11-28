@@ -77,9 +77,19 @@ header #modavo {
     display: block;
 }
 
-.tema {
+#tema {
     border: none;
     background-color: var(--red-bg);
+    width: auto;
+    height: auto;
+}
+
+.claro {
+    color: yellow;
+}
+
+.escuro {
+    color: white;
 }
 
 .none {
