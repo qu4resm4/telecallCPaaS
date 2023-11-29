@@ -2,7 +2,6 @@ var body = document.querySelector("body");
 const btnTroca = document.querySelector("#tema");
 const sun = document.querySelector(".claro");
 const moon = document.querySelector(".escuro");
-const img = document.querySelector("#imgjpg")
 var tema;
 function set(chave, valor) {
     localStorage.setItem(chave, valor)
@@ -30,7 +29,6 @@ btnTroca.addEventListener('click', () => {
     if (tema == 'light') {
         localStorage.setItem('tema', 'dark')
         console.log('verificado light')
-        img.classList.add("none")
     }
     body.classList.toggle('dark')
     moon.classList.toggle('none')
