@@ -2,7 +2,8 @@
     max-height: 500px;
 }
 .card {
-    background-color: var(--bege-bg);
+    background-color: var(--white-bg) !important
+    ;
 }
 
 #section-2, #section-4 {

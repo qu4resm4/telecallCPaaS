@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+.col svg {
+    color: var(--black-font);
+}
+
 /*class p por no body*/
 :root {
     --red-bg: #cc1c2c;
