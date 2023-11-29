@@ -2,6 +2,10 @@
     transform: scaleX(-1);
 }
 
+#section-2 {
+    background-color: var(--white-bg);
+}
+
 #section-2 p {
     margin: 9vw 6vw 0 6vw;
     font-size: 19px;
@@ -33,10 +37,14 @@
     text-align: center;
 }
 
+#section-4 {
+    background-color: var(--white-bg);
+}
+
 #section-5 .row {
     min-height: 62vh;
 }
-
+ 
 #section-5 .textos {
     text-align: center;
 }

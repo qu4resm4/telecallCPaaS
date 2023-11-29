@@ -1,5 +1,10 @@
 #section-2 {
  min-height: 95vh;
+ background-color: var(--white-bg);
+}
+
+#section-2 .card {
+    background-color: var(--bege-bg);
 }
 
 #section-3 {
@@ -34,6 +39,7 @@
 
 #section-4 {
     min-height: 95vh;
+    background-color: var(--white-bg);
 }
 
 .textos {

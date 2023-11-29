@@ -1,5 +1,5 @@
 .sumarios {
-    background-color: #cc1c2c;
+    background-color: var(--red-bg);
     min-height: 496px;
 }
 

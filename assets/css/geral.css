@@ -17,26 +17,31 @@ body {
     --blue-btn: #2AADE5;
     --black-font: black;
     --cinza-bg-rodape:  #D9D9D9;
-    
 }
 
 .dark {
     --red-bg: #8c0d1a; 
-    --bege-bg: #dcdcdc; 
+    --bege-bg: #333131; 
     --white-bg: #333333; 
     --blue-btn: #1a6b8c; 
     --black-font: #f5f5f5; 
-    --cinza-bg-footer: #666666; 
+    --cinza-bg-rodape: #666666;
 }
+
+p, h1, h2, h3, h4, h5, h6, a, li {
+    color: var(--black-font) !important;
+}
+
+
 
 /*logo modavo*/
 #modavo b {
-    color: white;
+    color: var(--white-bg);
     text-shadow:
-    -1px -1px #2AADE5,
-    -1px 1px #2AADE5,
-    1px -1px #2AADE5,
-    1px 1px #2AADE5;
+    -1px -1px var(--blue-btn),
+    -1px 1px var(--blue-btn),
+    1px -1px var(--blue-btn),
+    1px 1px var(--blue-btn);
     
 }
 
@@ -75,7 +80,7 @@ section h2 {
     content: '';
     width: 100px;
     height: 4px;
-    background-color: #cc1c2c;
+    background-color: var(--red-bg);
     display: block;
     margin: 10px 0;
 }

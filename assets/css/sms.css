@@ -1,5 +1,6 @@
 #section-2 {
     min-height: 90vh;
+    background-color: var(--white-bg);
 }
 
 .img-hand {
@@ -46,6 +47,9 @@
     z-index: 1;
 }
 
+#section-4 {
+    background-color: var(--white-bg);
+}
 
 #section-4 .row {
     min-height: 50vh;

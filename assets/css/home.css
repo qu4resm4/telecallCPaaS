@@ -4,12 +4,12 @@
 }
 
 .slogan b {
-    color: white;
+    color: var(--white-bg);
     text-shadow:
-    -1px -1px #2AADE5,
-    -1px 1px #2AADE5,
-    1px -1px #2AADE5,
-    1px 1px #2AADE5;
+    -1px -1px var(--blue-btn),
+    -1px 1px var(--blue-btn),
+    1px -1px var(--blue-btn),
+    1px 1px var(--blue-btn);
     
 }
 

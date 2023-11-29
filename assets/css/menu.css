@@ -26,6 +26,7 @@ header #modavo {
 #btn-entrar {
     padding: 9px 25px;
     background-color: var(--white-bg);
+    color: var(--black-font);
     border: none;
     border-radius: 50px;
     font-weight: bold;
@@ -54,11 +55,15 @@ header #modavo {
 }
 
 /* --- Dropdown no Menu dos Serviços */
+.dropdown-menu a {
+    color: black !important;
+}
+
 .drop-menu {
-    background-color: white;
+    background-color: var(--white-bg);
     position: absolute;
-    border: 1px solid #cc1c2c;
-    color: black;
+    border: 1px solid var(--red-bg);
+    color: var(--black-font);
     list-style: none;
     display: none;
     padding: 10px;

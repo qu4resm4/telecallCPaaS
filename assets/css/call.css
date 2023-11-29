@@ -1,6 +1,13 @@
 #call-ve {
     max-height: 500px;
 }
+.card {
+    background-color: var(--bege-bg);
+}
+
+#section-2, #section-4 {
+    background-color: var(--white-bg);
+}
 
 #section-3, #section-5 {
     background-color: var(--bege-bg);
