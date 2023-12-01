@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODAVO</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/telecall-favicon.svg">
+    <link rel="stylesheet" href="assets/css/geral.css">
+    <link rel="stylesheet" href="assets/css/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/menu.js" defer></script>
+    <script src="assets/js/trocarTema.js" defer></script>
+    <script src="assets/js/tamanhoFonte.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-color">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="index.html" id="modavo">MO<b>DA</b>VO</a>
+                <button class="ms-5" type="button" id="tema">
+                    <div class="claro none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                    </div>
+                    <div class="escuro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"/>
+                            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+                        </svg>
+                    </div>
+                </button>
+                <div class="ms-3 btn-container">
+                    <span id="controle_zoom">
+                        <a id="btnAumentar">A+</a>
+                        |
+                        <a id="btnDiminuir">A-</a>
+                    </span>
+                </div>
+                    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse p-3 hamburguer-color" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto me-5">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle item_color" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Serviços
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="twofa.html">2FA</a></li>
+                              <li><a class="dropdown-item" href="sms.html">SMS</a></li>
+                              <li><a class="dropdown-item" href="mask.html">Number Masking</a></li>
+                              <li><a class="dropdown-item" href="call.html">Verified Calls</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link item_color" aria-current="page" href="https://cpaasapi.telecall.com.br/swagger/index.html">API</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link item_color" href="#">Central de Ajuda</a>
+                          </li>
+                        </ul>
+                        <a href="login.html"><button class="btn-lg border border-0 me-4" id="btn-entrar">Entrar</button></a>
+                        <div class="drop">
+                            <div class="logado-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                                </svg> 
+                            </div>
+                            <div class="drop-menu" id="menu-logado">
+                                    <a class="item-logado" href="">Perfil</a>
+                                    <a class="item-logado" href="">Dashboard</a>
+                                    <a class="item-logado" href="">Configurações</a>
+                                    <button class="deslogar">SAIR</button>
+                            </div>
+                        </div>
+                        <!--
+                            <ul>
+                                <li class="dropdown">
+                                    <a>
+                                        <div class="logado-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                                            </svg> 
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                    <li><button class="deslogar">SAIR</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        -->
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="content text-center text-uppercase">
+                <h2 class="m-0">Sobre o Grupo</h2>
+                <h2 class="m-0 p-3">Integrantes</h2>
+                <p>Gabriel Quaresma Araujo</p>
+                <h2 class="m-0 p-3">Orientador</h2>
+                <p>Charles Bastos</p>
+                <h2 class="m-0 p-3">Turma</h2>
+                <p>2023 - ADS0101N</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteiner-fluid sumarios">
+            <div class="row mx-5 px-5">
+                    <div class="col-md sumario">
+                        <a href="twofa.html"><h3>2FA</h3></a>
+                        <p><a href="twofa.html#section-2">Como Funciona</a></p>
+                        <p><a href="twofa.html#section-3">Benefícios</a></p>
+                        <p><a href="twofa.html#section-4">Usos</a></p>
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="sms.html"><h3>SMS Programável</h3></a>
+                        <p><a href="sms.html#section-2">Como Funciona</a></p>
+                        <p><a href="sms.html#section-3">Benefícios</a></p>
+                        <p><a href="sms.html#section-4">Usos</a></p>
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="mask.html"><h3>Number Masking</h3></a>
+                        <p><a href="mask.html#section-2">O que é?</a></p>
+                        <p><a href="mask.html#section-3">Recursos</a></p>
+                        <p><a href="mask.html#section-4">Quem Usa?</a></p>
+        
+                    </div>
+        
+                    <div class="col-md sumario">
+                        <a href="call.html"><h3>Verified Calls</h3></a>
+                        <p><a href="call.html#section-2">O que é?</a></p>
+                        <p><a href="call.html#section-3">Como Funciona</a></p>
+                        <p><a href="call.html#section-4">Benefícios</a></p>
+                        <p><a href="call.html#section-5">Usos</a></p>
+                    </div>
+            </div>
+        </div>
+        <div class="row rodape px-5 d-flex align-items-center">
+            <p class="col-6 mx-5 px-5">Copyright © 2023 | qu4.resm4. Todos os direitos reservados.</p>
+            <div class="col">
+                <img class="tele-icon float-end" src="assets/img/telecall-icon.svg" alt="logo telecall">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
