@@ -62,7 +62,7 @@ form.addEventListener("submit", (e) => {
         } else {
             localStorage.setItem("login", loginInput.value)
             localStorage.setItem("senha", passwordInput.value)
-            //window.location.href = "login.html";
+            window.location.href = "login.html";
         }
     }
 });
