@@ -16,7 +16,6 @@ footer a {
 }
 
 .rodape {
-    width: 101vw;
     background-color: var(--cinza-bg-rodape);
     min-height: 110px;
 }
