@@ -24,10 +24,6 @@ fieldset {
     text-align: center;
 }
 
-.form-image {
-    display: none;
-}
-
 .toast {
     display: none;
     position: absolute;

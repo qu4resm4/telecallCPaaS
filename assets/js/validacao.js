@@ -72,7 +72,7 @@ function verificarCaracteres(input, event, index) {
 };
 
 // função verificar se confirm é igual a password
-function verifiicarConfirm(password, confirmPass, index, event) {
+function verificarConfirm(password, confirmPass, index, event) {
     const mensagem = 'As senhas não coincidem. Tente novamente.';
     if(password.value !== confirmPass.value) {
         event.preventDefault()
@@ -232,7 +232,7 @@ console.log(envioValido)
         console.log(envioValido)
         envioValido = verificarCaracteres(confirmInput, event, indexConfirmInput);
         console.log(envioValido)
-        envioValido = verifiicarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
+        envioValido = verificarConfirm(passwordInput, confirmInput, indexConfirmInput, event);
         console.log(envioValido)
     };
 

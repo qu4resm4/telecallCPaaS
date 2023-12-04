@@ -29,8 +29,8 @@ form.addEventListener("submit", (e) => {
             } else {
                 // logado é true
                 localStorage.setItem("loginLOGADO", "true")
+                window.location.href = "index.html";
             }
         }
-    window.location.href = "index.html";
 })
 // anotaçao: para desligar  efeitos de logado setar false usar mecanica de resgatar no localStorage 

@@ -15,7 +15,7 @@ header #modavo {
 }
 
 .item_color {
-    color: var(--white-bg);
+    color: white;
 }
 
 
@@ -36,7 +36,8 @@ header #modavo {
 .logado-icon {
     display: none;
     padding: 9px 12px;
-    background-color: white;
+    background-color: var(--white-bg);
+    color: var(--black-font); 
     border: none;
     border-radius: 50px;
     font-family: Verdana;
